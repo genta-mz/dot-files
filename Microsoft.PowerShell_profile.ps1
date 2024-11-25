@@ -22,9 +22,6 @@ Set-PSReadLineKeyHandler -Chord Ctrl+r -ScriptBlock {
     }
 }
 
-# PSReadLine有効化
-Import-Module PSReadLine
-
 # fish風のオートサジェスト機能を有効に
 Set-PSReadLineOption -PredictionSource History -PredictionViewStyle InlineView
 
