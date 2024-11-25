@@ -3,7 +3,12 @@ if ($Env:OS -eq "Windows_NT") {
     $Env:Path += ";$HOME\AppData\Local\Programs\oh-my-posh\bin"
 }
 else {
-    $Env:PATH += ":$HOME/bin"
+    if (Test-Path "/opt/homebrew/bin/oh-my-posh") {
+        $Env:PATH += ":/opt/homebrew/bin"
+    }
+    else {
+        $Env:PATH += ":$HOME/bin"
+    }
 }
 
 oh-my-posh init pwsh --config ~/jandedobbeleer.omp.json | Invoke-Expression
