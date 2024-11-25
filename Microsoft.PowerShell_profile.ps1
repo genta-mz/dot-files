@@ -6,7 +6,6 @@ else {
     $Env:PATH += ":$HOME/bin"
 }
 
-
 oh-my-posh init pwsh --config ~/jandedobbeleer.omp.json | Invoke-Expression
 
 Set-PSReadLineKeyHandler -Chord Ctrl+r -ScriptBlock {
